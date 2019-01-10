@@ -1,28 +1,63 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import './App.scss';
+//import('./static/data/products.json').then(json => ...)
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <React.Fragment>
+      <GithubCorner />
+      <main>
+      <Filter />
+      <Shelf />
+      </main>
+      <FloatCart />
+      </React.Fragment>
+      );
+    }
   }
-}
 
-export default App;
+ 
+  class Filter extends Component {
+  
+    render() {
+      return (
+      <div className="filters">
+      <h4 className="title">Sizes:</h4>
+      </div>
+      );
+    }
+  }
+
+
+ 
+
+  class FloatCart extends Component{
+    render(){
+      return(
+      <button className="square">
+    </button>
+      )
+    }
+  }
+
+  class Shelf extends Component {
+    render(){
+      return (
+      <div>
+      <div className="header"> </div>
+      </div>
+      )
+    }
+  }
+
+  class GithubCorner extends Component{
+    render(){
+      return(
+      <button className="square">
+    </button>
+      )
+    }
+  }
+
+  export default App;
